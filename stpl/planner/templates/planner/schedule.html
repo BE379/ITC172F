@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<h2>Schedule</h2>
+<table class='table'>
+	<tr>
+		<th>Student ID</th>
+		<th>Class ID</th>
+		<th>Comments</th>
+	</tr>
+	{% for item in schedule_list %}
+		<tr>
+			<td>{{ item.studentid }}</td>
+			<td>{{ item.classid }}</td>
+			<td>{{ item.schedulecomments }}</td>
+		</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}
